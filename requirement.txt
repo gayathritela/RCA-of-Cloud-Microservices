@@ -1,0 +1,7 @@
+!pip install keybert
+!pip install sentence_transformers
+from sentence_transformers import SentenceTransformer
+
+# Load Sentence Transformers
+model_semantic = SentenceTransformer('all-MiniLM-L6-v2')
+model_scoring = SentenceTransformer('bert-base-nli-mean-tokens')
