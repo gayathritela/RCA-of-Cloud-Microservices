@@ -91,7 +91,7 @@ Contributions are welcome! Here's how you can contribute:
 
 ## 📞 Contact
 
-For more information or inquiries, please contact [Gayathiri Elambooranan](https://www.linkedin.com/in/gayathiri-elambooranan).
+[Gayathiri Elambooranan](https://www.linkedin.com/in/gayathiri-elambooranan).
 
 © 2024 Gayathiri Elambooranan.
 
