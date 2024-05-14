@@ -89,7 +89,8 @@ Contributions are welcome! Here's how you can contribute:
 - **Researchers and Developers**: Gayathiri Elambooranan, Pranay Sood
 - **Dataset**: Provided by the PetShop Dataset Authors
 
-## 📞 Contact
+ ## 🤝 Connect
+
 
 [Gayathiri Elambooranan](https://www.linkedin.com/in/gayathiri-elambooranan).
 
