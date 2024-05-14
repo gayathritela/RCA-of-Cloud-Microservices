@@ -12,7 +12,7 @@ print("Models loaded.")
 
 # Load data
 file_path = '/content/transformed_transposed_issue1_metrics.csv'
-json_path = '/content/updated_injected_issues_summary (2).json'
+json_path = '/content/service_dependency_information.json'
 metrics_data = pd.read_csv(file_path)
 metrics_data['timestamp'] = pd.to_datetime(metrics_data['timestamp'])
 
