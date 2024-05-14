@@ -3,7 +3,7 @@
 
 ## 🌐 Project Overview
 
-![Project Overview](link-to-your-image.jpg)
+
 
 This project focuses on analyzing root causes of anomalies in cloud microservices using both traditional models and Large Language Models (LLMs). The primary dataset used is the "PetShop Dataset," which is designed to facilitate root cause analysis in microservice environments.
 
