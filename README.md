@@ -77,12 +77,22 @@ python Path_Based_Evaluation.py
 
 ## 👥 Contributing
 
-Contributions are welcome! Please feel free to submit pull requests to the repository.
+Contributions are welcome! Here's how you can contribute:
+
+- **Issues**: Report bugs or suggest features by creating an issue in the repository.
+- **Pull Requests**: Fork the repository, make your changes, and submit a pull request for review.
+- **Feedback**: Provide feedback on model usage and suggest improvements to enhance the project.
 
 ## 🙏 Acknowledgments
 
-- Thanks to Dr. Yan Liu for supervising this project.
+- **Supervisor**: Dr. Yan Liu
+- **Researchers and Developers**: Gayathiri Elambooranan, Pranay Sood
+- **Dataset**: Provided by the PetShop Dataset Authors
 
+## 📞 Contact
 
+For more information or inquiries, please contact [Gayathiri Elambooranan](https://www.linkedin.com/in/gayathiri-elambooranan).
+
+© 2024 Gayathiri Elambooranan.
 
 
