@@ -1,0 +1,365 @@
+{
+    "services": [
+        {
+            "name": "169.254.170.2_remote",
+            "dependencies": [],
+            "dependents": [
+                "PetSearch_AWS::ECS::Fargate"
+            ]
+        },
+        {
+            "name": "AWSSimpleSystemsManagement_AWS::AWSSimpleSystemsManagement",
+            "dependencies": [],
+            "dependents": [
+                "PetSearch_AWS::ECS::Fargate"
+            ]
+        },
+        {
+            "name": "DynamoDB_AWS::DynamoDB",
+            "dependencies": [],
+            "dependents": [
+                "lambda_step_readDDB"
+            ]
+        },
+        {
+            "name": "Evidently_AWS::Evidently",
+            "dependencies": [],
+            "dependents": [
+                "lambda_step_priceGreaterThan55",
+                "lambda_step_priceLessThan55"
+            ]
+        },
+        {
+            "name": "PGSQL Query_remote",
+            "dependencies": [],
+            "dependents": [
+                "petlistadoptions_AWS::ECS::Fargate"
+            ]
+        },
+        {
+            "name": "PetAdoptionStatusUpdater/prod_AWS::ApiGateway::Stage",
+            "dependencies": [
+                "lambdastatusupdater_AWS::Lambda"
+            ],
+            "dependents": [
+                "payforadoption_AWS::ECS::Container"
+            ]
+        },
+        {
+            "name": "PetSearch_AWS::ECS::Fargate",
+            "dependencies": [
+                 "petInfo_AWS::DynamoDB::Table",
+                 "169.254.170.2_remote",
+                 "AWSSimpleSystemsManagement_AWS::AWSSimpleSystemsManagement",
+                "S3_AWS::S3"
+            ],
+            "dependents": [
+                "PetSearch_client",
+                "PetSite",
+                "petlistadoptions_AWS::ECS::Fargate"
+            ]
+        },
+        {
+            "name": "PetSearch_client",
+            "dependencies": [
+                "PetSearch_AWS::ECS::Fargate"
+            ],
+            "dependents": []
+        },
+        {
+            "name": "PetSite",
+            "dependencies": [
+                "PetSearch_AWS::ECS::Fargate",
+                "STS_AWS::STS",
+                "SimpleNotificationService_AWS::SimpleNotificationService",
+                "SimpleSystemsManagement_AWS::SimpleSystemsManagement",
+                "StepFunctions_AWS::StepFunctions",
+                "payforadoption_AWS::ECS::Container",
+                "petlistadoptions_AWS::ECS::Fargate",
+                "AWS::StepFunctions::StateMachine",
+                "https://sqs.us-west-2.amazonaws.com/Services-sqspetadoption_AWS::SQS::Queue",
+                "servi-lista.us-west-2.elb.amazonaws.com_remote",
+                "servi-petsi.us-west-2.elb.amazonaws.com_remote",
+                "servi-searc.us-west-2.elb.amazonaws.com_remote"
+            ],
+            "dependents": []
+        },
+        {
+            "name": "SSM_AWS::SSM",
+            "dependencies": [],
+            "dependents": [
+                "lambda_step_readDDB"
+            ]
+        },
+        {
+            "name": "STS_AWS::STS",
+            "dependencies": [],
+            "dependents": [
+                "PetSite"
+            ]
+        },
+        {
+            "name": "SimpleNotificationService_AWS::SimpleNotificationService",
+            "dependencies": [],
+            "dependents": [
+                "PetSite"
+            ]
+        },
+        {
+            "name": "SimpleSystemsManagement_AWS::SimpleSystemsManagement",
+            "dependencies": [],
+            "dependents": [
+                "PetSite"
+            ]
+        },
+        {
+            "name": "StepFnStateMachine76D362E8-T67Tg48ke8oK_client",
+            "dependencies": [
+                "AWS::StepFunctions::StateMachine"
+            ],
+            "dependents": []
+        },
+        {
+            "name": "StepFunctions_AWS::StepFunctions",
+            "dependencies": [],
+            "dependents": [
+                "PetSite"
+            ]
+        },
+        {
+            "name": "amazon.com_remote",
+            "dependencies": [],
+            "dependents": [
+                "payforadoption_AWS::ECS::Container"
+            ]
+        },
+        {
+            "name": "lambda_step_priceGreaterThan55",
+            "dependencies": [
+                "Evidently_AWS::Evidently"
+            ],
+            "dependents": [
+                "lambda_step_priceGreaterThan55_AWS::Lambda::Function"
+            ]
+        },
+        {
+            "name": "lambda_step_priceGreaterThan55_AWS::Lambda",
+            "dependencies": [
+                "lambda_step_priceGreaterThan55_AWS::Lambda::Function"
+            ],
+            "dependents": [
+                "AWS::StepFunctions::StateMachine"
+            ]
+        },
+        {
+            "name": "lambda_step_priceGreaterThan55_AWS::Lambda::Function",
+            "dependencies": [
+                "lambda_step_priceGreaterThan55"
+            ],
+            "dependents": [
+                "lambda_step_priceGreaterThan55_AWS::Lambda"
+            ]
+        },
+        {
+            "name": "lambda_step_priceLessThan55",
+            "dependencies": [
+                "Evidently_AWS::Evidently"
+            ],
+            "dependents": [
+                "lambda_step_priceLessThan55_AWS::Lambda::Function"
+            ]
+        },
+        {
+            "name": "lambda_step_priceLessThan55_AWS::Lambda",
+            "dependencies": [
+                "lambda_step_priceLessThan55_AWS::Lambda::Function"
+            ],
+            "dependents": [
+                "AWS::StepFunctions::StateMachine"
+            ]
+        },
+        {
+            "name": "lambda_step_priceLessThan55_AWS::Lambda::Function",
+            "dependencies": [
+                "lambda_step_priceLessThan55"
+            ],
+            "dependents": [
+                "lambda_step_priceLessThan55_AWS::Lambda"
+            ]
+        },
+        {
+            "name": "lambda_step_readDDB",
+            "dependencies": [
+                "DynamoDB_AWS::DynamoDB",
+                "SSM_AWS::SSM"
+            ],
+            "dependents": [
+                "lambda_step_readDDB_AWS::Lambda::Function"
+            ]
+        },
+        {
+            "name": "lambda_step_readDDB_AWS::Lambda",
+            "dependencies": [
+                "lambda_step_readDDB_AWS::Lambda::Function"
+            ],
+            "dependents": [
+                "AWS::StepFunctions::StateMachine"
+            ]
+        },
+        {
+            "name": "lambda_step_readDDB_AWS::Lambda::Function",
+            "dependencies": [
+                "lambda_step_readDDB"
+            ],
+            "dependents": [
+                "lambda_step_readDDB_AWS::Lambda"
+            ]
+        },
+        {
+            "name": "lambdastatusupdater_AWS::Lambda",
+            "dependencies": [
+                "lambdastatusupdater_AWS::Lambda::Function"
+            ],
+            "dependents": [
+                "PetAdoptionStatusUpdater/prod_AWS::ApiGateway::Stage"
+            ]
+        },
+        {
+            "name": "lambdastatusupdater_AWS::Lambda::Function",
+            "dependencies": [
+                "petInfo_AWS::DynamoDB::Table",
+                "invalid_AWS::DynamoDB::Table"
+            ],
+            "dependents": [
+                "lambdastatusupdater_AWS::Lambda"
+            ]
+        },
+        {
+            "name": "payforadoption_AWS::ECS::Container",
+            "dependencies": [
+                "PetAdoptionStatusUpdater/prod_AWS::ApiGateway::Stage",
+                "amazon.com_remote",
+                "www.amazon.com_remote",
+                "adoptions@services-database.us-west-2.rds.amazonaws.com_Database::SQL",
+                "execute-api.us-west-2.amazonaws.com_remote"
+            ],
+            "dependents": [
+                "PetSite"
+            ]
+        },
+        {
+            "name": "petInfo_AWS::DynamoDB::Table",
+            "dependencies": [],
+            "dependents": [
+                "PetSearch_AWS::ECS::Fargate",
+		        "payforadoption_AWS::ECS::Container",
+		        "petlistadoptions_AWS::ECS::Fargate",
+                "lambdastatusupdater_AWS::Lambda::Function",
+                "PetSite"
+            ]
+        },
+        {
+            "name": "petlistadoptions_AWS::ECS::Fargate",
+            "dependencies": [
+                "PGSQL Query_remote",
+                "PetSearch_AWS::ECS::Fargate",
+                "Servi-searc.us-west-2.elb.amazonaws.com_remote"
+            ],
+            "dependents": [
+                "PetSite",
+                "petlistadoptions_client"
+            ]
+        },
+        {
+            "name": "petlistadoptions_client",
+            "dependencies": [
+                "petlistadoptions_AWS::ECS::Fargate"
+            ],
+            "dependents": []
+        },
+        {
+            "name": "www.amazon.com_remote",
+            "dependencies": [],
+            "dependents": [
+                "payforadoption_AWS::ECS::Container"
+            ]
+        },
+        {
+            "name": "S3_AWS::S3",
+            "dependencies": [],
+            "dependents": [
+                "PetSearch_AWS::ECS::Fargate"
+            ]
+        },
+        {
+            "name": "invalid_AWS::DynamoDB::Table",
+            "dependencies": [],
+            "dependents": [
+                "lambdastatusupdater_AWS::Lambda::Function"
+            ]
+        },
+        {
+            "name": "Servi-searc.us-west-2.elb.amazonaws.com_remote",
+            "dependencies": [],
+            "dependents": [
+                "petlistadoptions_AWS::ECS::Fargate",
+                "lambdastatusupdater_AWS::Lambda::Function",
+                "payforadoption_AWS::ECS::Container"
+            ]
+        },
+        {
+            "name": "AWS::StepFunctions::StateMachine",
+            "dependencies": [
+                "lambda_step_priceGreaterThan55_AWS::Lambda",
+                "lambda_step_priceLessThan55_AWS::Lambda",
+                "lambda_step_readDDB_AWS::Lambda"
+            ],
+            "dependents": [
+                "PetSite",
+                "StepFnStateMachine76D362E8-T67Tg48ke8oK_client"
+            ]
+        },
+        {
+            "name": "adoptions@services-database.us-west-2.rds.amazonaws.com_Database::SQL",
+            "dependencies": [],
+            "dependents": [
+                "payforadoption_AWS::ECS::Container"
+            ]
+        },
+        {
+            "name": "https://sqs.us-west-2.amazonaws.com/Services-sqspetadoption_AWS::SQS::Queue",
+            "dependencies": [],
+            "dependents": [
+                "PetSite"
+            ]
+        },
+        {
+            "name": "servi-lista.us-west-2.elb.amazonaws.com_remote",
+            "dependencies": [],
+            "dependents": [
+                "PetSite"
+            ]
+        },
+        {
+            "name": "servi-petsi.us-west-2.elb.amazonaws.com_remote",
+            "dependencies": [],
+            "dependents": [
+                "PetSite"
+            ]
+        },
+        {
+            "name": "servi-searc.us-west-2.elb.amazonaws.com_remote",
+            "dependencies": [],
+            "dependents": [
+                "PetSite"
+            ]
+        },
+        {
+            "name": "execute-api.us-west-2.amazonaws.com_remote",
+            "dependencies": [],
+            "dependents": [
+                "payforadoption_AWS::ECS::Container"
+            ]
+        }
+    ]
+}
