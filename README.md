@@ -12,7 +12,10 @@ This project focuses on analyzing root causes of anomalies in cloud microservice
 - **🔄 Data Preprocessing**: Transform and prepare data for analysis.
 - **🚨 Anomaly Detection**: Use Median Absolute Deviation (MAD) to detect anomalies.
 - **🤖 Model Execution**: Compare responses from traditional models and LLMs like Genstruct and MixtraL.
-- **📊 Evaluation**: Assess model predictions against ground truth using path-based and other evaluation methods.
+- **📊 Evaluation**: 
+  - **Traditional Model Evaluation**: Evaluate the traditional model responses to verify the accuracy of the root cause identification against standards specified in Target.json.
+  - **LLM Evaluation**: Conduct a comprehensive evaluation, including a path-based evaluation using data from Graph.csv to assess the connections between the root cause and target nodes.
+
 
 ### 📁 Directory Structure
 
