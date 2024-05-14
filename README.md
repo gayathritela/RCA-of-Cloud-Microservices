@@ -82,20 +82,5 @@ Contributions are welcome! Please feel free to submit pull requests to the repos
 - This project was inspired by the work described in "The PetShop Dataset — Finding Causes of Performance Issues across Microservices" by Hardt et al., 2023.
 ```
 
-### Updated requirements.txt
 
-```plaintext
-# Fundamental packages
-numpy>=1.18.5
-pandas>=1.0.5
-matplotlib>=3.2.2
-
-# Machine learning libraries
-scikit-learn>=0.23.1
-gensim>=3.8.3
-
-# Deep learning frameworks
-torch>=1.5.0
-transformers>=3.0.2
-```
 
