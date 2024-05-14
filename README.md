@@ -82,7 +82,7 @@ Contributions are welcome! Please feel free to submit pull requests to the repos
 ## 🙏 Acknowledgments
 
 - Thanks to Dr. Yan Liu for supervising this project.
-- This project was inspired by the work described in "The PetShop Dataset — Finding Causes of Performance Issues across Microservices" by Hardt et al., 2023.
+
 
 
 
