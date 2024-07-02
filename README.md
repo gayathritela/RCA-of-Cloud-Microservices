@@ -1,5 +1,18 @@
 
 # Root Cause Analysis of Cloud Microservices
+Root Cause Analysis of Cloud Microservices
+Project Overview
+This project conducts a detailed evaluation of Root Cause Analysis (RCA) techniques in cloud microservices, leveraging the rigorously transformed "Pet Shop Dataset." This dataset, originally containing various performance metrics, has been standardized to enhance analysis suitability for both traditional methods and Large Language Models (LLMs).
+
+Research Objectives
+Data Transformation: Convert complex metrics into a streamlined format to facilitate efficient anomaly detection.
+Integration of Advanced Techniques: Employ Pinecone for optimized data retrieval and Neo4j for managing intricate service dependencies, crucial for deciphering microservice interactions.
+Dual-Prompt Strategy: Use a dual-prompt approach complemented by synthetic data generation to simulate real-world operational scenarios, enabling robust RCA testing under varied conditions.
+Key Findings
+Effectiveness of RCA Techniques: The study evaluates RCA in environments with and without Retrieval-Augmented Generation (RAG), showing that synthetic data combined with dynamic querying notably improves the precision of anomaly detection.
+Insights into Microservices: Provides deeper understanding of the causal relationships within microservices architectures, setting a new benchmark for RCA.
+Future Directions
+This research proposes a scalable and effective framework for cloud service management, paving the way for future advancements in cloud service technologies.
 
 ## 🌐 Project Overview
 
