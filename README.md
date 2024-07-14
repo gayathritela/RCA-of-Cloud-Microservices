@@ -1,112 +1,103 @@
+# Root Cause Analysis for Cloud Microservices
 
-# Root Cause Analysis of Cloud Microservices
-Root Cause Analysis of Cloud Microservices
-Project Overview
-This project conducts a detailed evaluation of Root Cause Analysis (RCA) techniques in cloud microservices, leveraging the rigorously transformed "Pet Shop Dataset." This dataset, originally containing various performance metrics, has been standardized to enhance analysis suitability for both traditional methods and Large Language Models (LLMs).
+## Overview
+This project aims to enhance anomaly detection and root cause analysis (RCA) within cloud microservices by leveraging advanced data processing techniques and AI models. We focus on synthetic data generation, hybrid search strategies, knowledge graph integrations, and dual-prompt strategies for comprehensive anomaly detection and diagnosis.
 
-Research Objectives
-Data Transformation: Convert complex metrics into a streamlined format to facilitate efficient anomaly detection.
-Integration of Advanced Techniques: Employ Pinecone for optimized data retrieval and Neo4j for managing intricate service dependencies, crucial for deciphering microservice interactions.
-Dual-Prompt Strategy: Use a dual-prompt approach complemented by synthetic data generation to simulate real-world operational scenarios, enabling robust RCA testing under varied conditions.
-Key Findings
-Effectiveness of RCA Techniques: The study evaluates RCA in environments with and without Retrieval-Augmented Generation (RAG), showing that synthetic data combined with dynamic querying notably improves the precision of anomaly detection.
-Insights into Microservices: Provides deeper understanding of the causal relationships within microservices architectures, setting a new benchmark for RCA.
-Future Directions
-This research proposes a scalable and effective framework for cloud service management, paving the way for future advancements in cloud service technologies.
+## Research Goals
+- **Synthetic Data Generation**: Generate synthetic datasets to mimic real operational scenarios for robust testing.
+- **Hybrid Search Implementation**: Use Pinecone for optimizing data retrieval through both term-based and vector-based searches.
+- **Knowledge Graph Augmentation**: Utilize Neo4j to structure complex relationships among microservices for improved analysis.
+- **Dual Prompt Strategy for Anomaly Detection**: Employ dual-prompt techniques to provide detailed insights into microservice interactions and dependencies.
 
-## 🌐 Project Overview
+## Dataset
+- **Transformed Petshop Dataset**: 210 rows and 9 columns, featuring consolidated metrics and a simplified data structure suitable for machine learning applications.
+- **Synthetic Datasets**: Designed to replicate realistic operational challenges for effective anomaly detection testing.
 
+## Technologies Used
+- **Pinecone**: For efficient vector-based and term-based search functionalities.
+- **Neo4j**: To manage complex data relationships within a graph database, enhancing RCA capabilities.
+- **LangChain and Hugging Face Models**: For generating dynamic queries and contextual data handling through advanced NLP.
+- **Python Libraries**: Pandas for data manipulation, PyTorch for model training, and Scikit-learn for data analysis.
 
+## Methodology
+1. **Data Preparation**: Use real operational metrics to create a baseline for synthetic data generation.
+2. **Anomaly Detection**: Apply machine learning models, such as Isolation Forest, to detect anomalies.
+3. **RCA with LLM**: Utilize language models to analyze and generate insights based on the anomalies detected.
+4. **Evaluation**: Systematically evaluate the models using precision and recall metrics, comparing the outputs against ground truth data.
 
-This project focuses on analyzing root causes of anomalies in cloud microservices using both traditional models and Large Language Models (LLMs). The primary dataset used is the "PetShop Dataset," which is designed to facilitate root cause analysis in microservice environments.
+## Installation
+Clone this repository using:
+git clone https://github.com/yourusername/project-repository-name.git
 
-### 🔑 Key Features
+css
+Copy code
 
-- **🔄 Data Preprocessing**: Transform and prepare data for analysis.
-- **🚨 Anomaly Detection**: Use Median Absolute Deviation (MAD) to detect anomalies.
-- **🤖 Model Execution**: Compare responses from traditional models and LLMs like Genstruct and MixtraL.
-- **📊 Evaluation**: 
-  - **Traditional Model Evaluation**: Evaluate the traditional model responses to verify the accuracy of the root cause identification against standards specified in Target.json.
-  - **LLM Evaluation**: Conduct a comprehensive evaluation, including a path-based evaluation using data from Graph.csv to assess the connections between the root cause and target nodes.
+## Usage
+To run the analysis, navigate to the project directory and execute:
+python anomaly_detection.py
 
+perl
+Copy code
 
-### 📁 Directory Structure
+## Contributions
+Contributions are welcome. Please open an issue first to discuss what you would like to change. Ensure to update tests as appropriate.
 
-```
-Root-Cause-Analysis-of-Cloud-Microservices/
-├── 📄 Datametrics_Preprocessing.py     # Script for preprocessing metrics data
-├── 📄 Groundtruthjson_Preprocessing.py # Script for preprocessing ground truth data
-├── 📄 Path_Based_Evaluation.py         # Script for path-based evaluation
-├── 📄 Pathtrace.py                     # Script for tracing paths in the graph
-├── 📄 Runllm.py                        # Script to run large language models
-└── 📄 requirements.txt                 # Required libraries and dependencies
-```
+## License
+Distributed under the MIT License. See `LICENSE` for more information.
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-Ensure you have Python installed on your system. This project is compatible with Python 3.8 and above.
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/gayathritela/RCA-of-Cloud-Microservices.git
-   cd RCA-of-Cloud-Microservices
-   ```
-
-2. Install the required packages:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-## 🛠 Usage
-
-### Data Preparation
-
-Use the preprocessing scripts to prepare your data:
-
-```bash
-python Datametrics_Preprocessing.py
-python Groundtruthjson_Preprocessing.py
-```
-
-### Run Models
-
-To execute the models and compare their performance:
-
-```bash
-python Runllm.py
-```
-
-### Evaluation
-
-To evaluate the model predictions against the ground truth:
-
-```bash
-python Path_Based_Evaluation.py
-```
-
-## 👥 Contributing
-
-Contributions are welcome! Here's how you can contribute:
-
-- **Issues**: Report bugs or suggest features by creating an issue in the repository.
-- **Pull Requests**: Fork the repository, make your changes, and submit a pull request for review.
-- **Feedback**: Provide feedback on model usage and suggest improvements to enhance the project.
-
-## 🙏 Acknowledgments
-
-- **Supervisor**: Dr. Yan Liu
-- **Researchers and Developers**: Gayathiri Elambooranan, Pranay Sood
-- **Dataset**: Provided by the PetShop Dataset Authors
-
- ## 🤝 Connect
+## Contact
+Your Name - your.email@example.com
+Project Link: https://github.com/yourusername/project-repository-name
+This README provides a concise yet comprehensive description of your project, including the technologies used, dataset details, and how to run the project. Make sure to replace placeholders like your GitHub username, email, and project link with actual information.
 
 
-[Gayathiri Elambooranan](https://www.linkedin.com/in/gayathiri-elambooranan).
-
-© 2024 Gayathiri Elambooranan.
 
 
+
+make it business perspective for my job 
+ChatGPT
+For a business-oriented README file tailored for showcasing the project to stakeholders or in a professional setting, the focus shifts towards the business impact, benefits, and strategic importance of the project. Here’s how you can structure it:
+
+markdown
+Copy code
+# Business Impact of Root Cause Analysis for Cloud Microservices
+
+## Executive Summary
+This project leverages advanced analytics, AI models, and data-driven insights to enhance anomaly detection and root cause analysis within cloud microservices environments. It aims to improve service reliability, reduce downtime, and optimize operational efficiency by proactively identifying and addressing potential issues.
+
+## Business Goals
+- **Reduce Operational Costs**: By automating anomaly detection, the project aims to reduce the time and resources spent on manual troubleshooting.
+- **Enhance Service Reliability**: Improve system uptime by quickly identifying and resolving issues before they impact customers.
+- **Drive Innovation**: Use cutting-edge technologies like AI and knowledge graphs to stay ahead in the competitive field of cloud services.
+
+## Key Features
+- **Synthetic Data Generation**: Simulate real-world scenarios to test and refine anomaly detection models without the need for extensive live testing.
+- **Hybrid Search Capabilities**: Combine term-based and vector-based searches to quickly retrieve relevant data and insights.
+- **Knowledge Graph Integration**: Enhance understanding of complex relationships and dependencies among microservices, aiding in more accurate root cause analysis.
+- **Dual Prompt Strategy**: Employ advanced NLP to generate comprehensive insights into system anomalies and service interactions.
+
+## Technologies Deployed
+- **Pinecone**: Implements sophisticated search strategies enhancing the precision of data retrieval.
+- **Neo4j**: Manages complex relationships within cloud architectures, improving RCA speed and accuracy.
+- **AI Models**: Utilize state-of-the-art machine learning models for predictive analytics and anomaly detection.
+
+## Implementation
+- **Setup**: Clone the repository and install dependencies.
+  ```bash
+  git clone https://github.com/yourusername/project-repository-name.git
+  cd project-repository-name
+  pip install -r requirements.txt
+  
+Execution: Run the analysis with:
+bash
+Copy code
+python anomaly_detection.py
+Business Impact
+Operational Efficiency: By automating RCA, the project significantly reduces the time to resolve issues, thereby minimizing downtime and improving customer satisfaction.
+Cost Effectiveness: Reduces the need for extensive manual interventions, lowering operational costs and resource allocation.
+Scalability: Designed to scale with growing business needs, ensuring the infrastructure can handle increased loads without performance degradation.
+Contributions
+We welcome contributions from industry experts and stakeholders to refine our approaches. Please contact us to discuss potential collaborations or contributions.
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
